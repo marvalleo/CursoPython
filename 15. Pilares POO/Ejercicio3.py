@@ -22,24 +22,20 @@ class Fabrica():
         print("Cuesta ${}".format(self.precio))
     
 class Moto(Fabrica):
-    def __init__(self):
-        self.llantas = 2
-        self.color = "Negro"
-        self.precio = 1000000
+    def datos(self):
+        print('La cantidad de llantas es de: ',self.llantas)
+        print('El color de la moto es: ',self.color)
+        print('El precio de la moto es de: ',self.precio)
 
 class Auto(Fabrica):
-    def __init__(self):
-        self.llantas = 4
-        self.color = "Grafito"
-        self.precio = 555555555
+    def datos(self):
+        print('La cantidad de llantas es de: ',self.llantas)
+        print('El color del auto es: ',self.color)
+        print('El precio del auto es de:',self.precio)
 
 
-moto = Moto()
-moto.ruedas()
-moto.colors()
-moto.costo()
+moto = Moto(2, "Negro", 100000)
+moto.datos()
 
-auto = Auto()
-auto.ruedas()
-auto.colors()
-auto.costo()
+auto = Auto(4, "Grafito", 500000)
+auto.datos()
